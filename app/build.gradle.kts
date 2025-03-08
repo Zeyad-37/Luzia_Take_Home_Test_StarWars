@@ -56,6 +56,10 @@ dependencies {
 
     implementation(libs.coil.compose)
 
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+
     implementation(libs.retrofit)
     implementation(platform(libs.okhttp.bom))
     implementation(libs.logging.interceptor)
