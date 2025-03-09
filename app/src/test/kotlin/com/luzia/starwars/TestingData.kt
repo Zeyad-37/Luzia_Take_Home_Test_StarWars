@@ -10,10 +10,10 @@ object TestingData {
     val planetDTO = PlanetDTO(
         name = "name",
         climate = "climate",
-        diameter = "diameter",
-        gravity = "gravity",
+        diameter = "100",
+        gravity = "1 gravity",
         terrain = "terrain",
-        population = "population",
+        population = "100",
         url = "url",
         films = listOf(),
         edited = "edited",
@@ -26,10 +26,10 @@ object TestingData {
     val planetDTO2 = PlanetDTO(
         name = "name",
         climate = "climate",
-        diameter = "diameter",
+        diameter = "100",
         gravity = "gravity",
         terrain = "terrain",
-        population = "population",
+        population = "100",
         url = "url",
         films = listOf(),
         edited = "edited",
@@ -43,49 +43,49 @@ object TestingData {
     val planetDomain = PlanetDomain(
         name = "name",
         climate = "climate",
-        diameter = "diameter",
+        diameter = "100",
         gravity = "gravity",
         terrain = "terrain",
-        population = "population"
+        population = "100"
     )
     val planetDomain2 = PlanetDomain(
         name = "name",
         climate = "climate",
-        diameter = "diameter",
+        diameter = "100",
         gravity = "gravity",
         terrain = "terrain",
-        population = "population"
+        population = "100"
     )
     val planetEntity = PlanetEntity(
         name = "name",
         climate = "climate",
-        diameter = "diameter",
+        diameter = "100",
         gravity = "gravity",
         terrain = "terrain",
-        population = "population"
+        population = "100"
     )
     val planetEntity2 = PlanetEntity(
         name = "name",
         climate = "climate",
-        diameter = "diameter",
+        diameter = "100",
         gravity = "gravity",
         terrain = "terrain",
-        population = "population"
+        population = "100"
     )
     val planetPM = PlanetPM(
-        name = "name",
-        climate = "climate",
-        diameter = "diameter",
-        gravity = "gravity",
-        terrain = "terrain",
-        population = "population"
+        name = "Name",
+        climate = "Climate",
+        diameter = "100",
+        gravity = "Gravity",
+        terrain = "Terrain",
+        population = "100"
     )
     val planetPM2 = PlanetPM(
-        name = "name",
-        climate = "climate",
-        diameter = "diameter",
-        gravity = "gravity",
-        terrain = "terrain",
-        population = "population"
+        name = "Name",
+        climate = "Climate",
+        diameter = "100",
+        gravity = "Gravity",
+        terrain = "Terrain",
+        population = "100"
     )
 }

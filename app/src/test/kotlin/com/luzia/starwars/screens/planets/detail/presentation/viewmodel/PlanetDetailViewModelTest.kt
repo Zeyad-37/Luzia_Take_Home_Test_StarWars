@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyString
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.never
+import org.mockito.kotlin.reset
 import org.mockito.kotlin.spy
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
@@ -23,6 +24,7 @@ class PlanetDetailViewModelTest {
 
     @BeforeEach
     fun setUp() {
+        reset(planetRepository, planetMapper)
         planetDetailViewModel = PlanetDetailViewModel(planetRepository, planetMapper, initialState)
     }
 
