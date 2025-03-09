@@ -31,7 +31,7 @@ fun MyApp() {
         composable<PlanetList> { PlanetsScreenStateHolder { navController.navigate(PlanetDetail(it)) } }
         composable<PlanetDetail> { backStackEntry: NavBackStackEntry ->
             PlanetDetailScreenStateHolder(
-                planetId = backStackEntry.toRoute<PlanetDetail>().planetId
+                planetName = backStackEntry.toRoute<PlanetDetail>().planetId
             ) { navController.popBackStack() }
         }
     }

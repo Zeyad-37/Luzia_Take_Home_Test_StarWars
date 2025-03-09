@@ -1,77 +1,109 @@
 package com.luzia.starwars.screens.planets.detail.presentation.ui
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.AbsoluteCutCornerShape
-import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import com.luzia.starwars.R
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
-import com.luzia.starwars.screens.planets.shared.presentation.ui.PlanetItemTextSlot
 import com.luzia.starwars.ui.theme.LuziaStarWarsTheme
 
 @Composable
-fun PlanetDetail(modifier: Modifier = Modifier, planet: PlanetPM) {
-    var showButton by remember { mutableStateOf(false) }
-    Column(modifier.fillMaxSize()) {
-//        AsyncImage(
-//            modifier = Modifier.fillMaxWidth(),
-//            model = planet.image,
-//            contentScale = ContentScale.FillWidth,
-//            contentDescription = null,
-//            clipToBounds = true,
-//            onError = { showButton = true },
-//            onSuccess = { showButton = false },
-//            error = painterResource(R.drawable.ic_launcher_foreground),
-//            placeholder = painterResource(R.drawable.ic_launcher_foreground),
-//        )
-        with(planet) {
-            PlanetItemTextSlot(name, climate, population, diameter, gravity, terrain)
+fun PlanetPM.PlanetDetail() {
+    Column(
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth()
+    ) {
+        val rowModifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp)
+        Row(rowModifier) {
+            Text(
+                text = "Climate",
+                Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Text(
+                text = climate,
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge,
+                textAlign = TextAlign.End
+            )
         }
-        if (showButton) {
-            Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.Bottom) {
-                Button(
-                    onClick = { /*TODO*/ },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 24.dp),
-//                    colors = ButtonColors(Purple, White, TaupeGray, OffWhite),
-                    shape = AbsoluteCutCornerShape(2.dp)
-                ) {
-                    Text("Download image")
-                }
-            }
+        Row(rowModifier) {
+            Text(
+                text = "Population",
+                Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Text(
+                text = population,
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge,
+                textAlign = TextAlign.End
+            )
+        }
+        Row(rowModifier) {
+            Text(
+                text = "Diameter",
+                Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Text(
+                text = diameter,
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge,
+                textAlign = TextAlign.End
+            )
+        }
+        Row(rowModifier) {
+            Text(
+                text = "Gravity",
+                Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Text(
+                text = gravity,
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge,
+                textAlign = TextAlign.End
+            )
+        }
+        Row(rowModifier) {
+            Text(
+                text = "Terrain",
+                Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Text(
+                text = terrain,
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge,
+                textAlign = TextAlign.End
+            )
         }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
 fun PlanetDetailPreview(modifier: Modifier = Modifier) {
     LuziaStarWarsTheme {
-        PlanetDetail(
-            planet = PlanetPM(
-                "climate",
-                "diameter",
-                "gravity",
-                "name",
-                "population",
-                "terrain",
-            )
-        )
+        PlanetPM(
+            "climate",
+            "diameter",
+            "gravity",
+            "Name",
+            "population",
+            "terrain",
+        ).PlanetDetail()
     }
 }

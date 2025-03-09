@@ -24,14 +24,11 @@ fun PlanetList(
     LazyColumn(
         Modifier
             .fillMaxSize()
-            .padding(top = 52.dp, bottom = 12.dp, start = 8.dp, end = 8.dp),
+            .padding(top = 12.dp, bottom = 12.dp, start = 8.dp, end = 8.dp),
         listState
     ) {
         items(list, { item -> item.name }) { planet ->
-            PlanetListItem(
-                planet,
-                onItemClick = { process(PlanetClickedInput(planet.name)) },
-            )
+            PlanetListItem(planet) { process(PlanetClickedInput(planet.name)) }
         }
     }
 }

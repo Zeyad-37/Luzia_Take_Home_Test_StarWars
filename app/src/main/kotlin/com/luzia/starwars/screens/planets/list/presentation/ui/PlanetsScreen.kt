@@ -67,7 +67,7 @@ fun PlanetsScreenContent(
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Start,
                         color = MaterialTheme.colorScheme.onBackground,
-                        style = MaterialTheme.typography.displayLarge
+                        style = MaterialTheme.typography.displaySmall
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(

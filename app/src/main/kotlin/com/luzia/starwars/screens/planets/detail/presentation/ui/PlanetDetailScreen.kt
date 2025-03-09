@@ -21,11 +21,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.BackButtonTappedInput
@@ -38,15 +36,14 @@ import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDe
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailState
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailViewModel
 import com.luzia.starwars.screens.planets.shared.presentation.ui.ErrorScreen
-import com.luzia.starwars.R
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
 fun PlanetDetailScreenStateHolder(
-    viewModel: PlanetDetailViewModel = hiltViewModel(), planetId: String, onBackPressed: () -> Unit,
+    viewModel: PlanetDetailViewModel = hiltViewModel(), planetName: String, onBackPressed: () -> Unit,
 ) {
     val snackBarHostState: SnackbarHostState = remember { SnackbarHostState() }
-    val planetDetailState by viewModel.state.collectAsState(InitialState(false, planetId))
+    val planetDetailState by viewModel.state.collectAsState(InitialState(false, planetName))
     LaunchedEffect(Unit) {
         viewModel.effect.collectLatest {
             when (it) {
@@ -54,7 +51,7 @@ fun PlanetDetailScreenStateHolder(
             }
         }
     }
-    PlanetDetailScreenContent(Modifier, planetDetailState, planetId, snackBarHostState) { viewModel.process(it) }
+    PlanetDetailScreenContent(Modifier, planetDetailState, planetName, snackBarHostState) { viewModel.process(it) }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -62,7 +59,7 @@ fun PlanetDetailScreenStateHolder(
 fun PlanetDetailScreenContent(
     modifier: Modifier = Modifier,
     state: PlanetDetailState,
-    planetId: String,
+    planetName: String,
     snackBarHostState: SnackbarHostState,
     process: (PlanetDetailInput) -> Unit,
 ) {
@@ -72,11 +69,11 @@ fun PlanetDetailScreenContent(
             TopAppBar(
                 {
                     Text(
-                        text = stringResource(R.string.app_name),
+                        text = planetName,
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Start,
                         color = MaterialTheme.colorScheme.onBackground,
-                        style = MaterialTheme.typography.displayLarge
+                        style = MaterialTheme.typography.displaySmall
                     )
                 }, navigationIcon = {
                     IconButton(onClick = { process(BackButtonTappedInput) }) {
@@ -99,7 +96,7 @@ fun PlanetDetailScreenContent(
     ) { innerPadding ->
         PullToRefreshBox(
             state.isLoading,
-            { process(LoadPlanetInput(planetId)) },
+            { process(LoadPlanetInput(planetName)) },
             Modifier
                 .fillMaxSize()
                 .padding(innerPadding),
@@ -107,7 +104,7 @@ fun PlanetDetailScreenContent(
             when (state) {
                 is InitialState -> process(LoadPlanetInput(state.planetId))
                 is ErrorState -> ErrorScreen(state.message)
-                is SuccessState -> PlanetDetail(Modifier, state.planet)
+                is SuccessState -> state.planet.PlanetDetail()
             }
         }
     }
