@@ -3,9 +3,8 @@ package com.luzia.starwars.screens.planets.shared.data
 import com.luzia.starwars.screens.planets.list.data.api.PlanetDTO
 import com.luzia.starwars.screens.planets.list.domain.model.PlanetDomain
 import com.luzia.starwars.screens.planets.shared.data.db.PlanetEntity
-import javax.inject.Inject
 
-class PlanetDataMapper @Inject constructor() {
+object PlanetDataMapper {
 
     fun mapDTOsToDomains(planetDTOs: List<PlanetDTO>): List<PlanetDomain> = planetDTOs.map {
         with(it) { PlanetDomain(climate, diameter, gravity, name, population, terrain) }
