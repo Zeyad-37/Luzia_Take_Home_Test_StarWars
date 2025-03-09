@@ -21,4 +21,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Luzia Star Wars"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":testBase")
+include(":architecture")
+include(":sharedUI")

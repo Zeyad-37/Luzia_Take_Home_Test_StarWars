@@ -2,7 +2,7 @@ package com.luzia.starwars.screens.planets.shared.presentation.model
 
 import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.text.intl.Locale
-import com.luzia.starwars.screens.planets.list.domain.model.PlanetDomain
+import com.luzia.domain.model.PlanetDomain
 import java.text.NumberFormat
 
 object PlanetPresentationMapper {

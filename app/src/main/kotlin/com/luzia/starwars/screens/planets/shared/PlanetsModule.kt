@@ -1,6 +1,6 @@
 package com.luzia.starwars.screens.planets.shared
 
-import com.luzia.starwars.screens.planets.shared.data.PlanetDataMapper
+import com.luzia.data.PlanetDataMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

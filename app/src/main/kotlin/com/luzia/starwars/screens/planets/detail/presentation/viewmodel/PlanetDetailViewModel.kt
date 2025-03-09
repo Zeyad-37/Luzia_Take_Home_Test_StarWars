@@ -1,10 +1,10 @@
 package com.luzia.starwars.screens.planets.detail.presentation.viewmodel
 
-import com.luzia.starwars.architecture.presentation.Result
-import com.luzia.starwars.architecture.presentation.ViewModel
-import com.luzia.starwars.di.Dispatcher
-import com.luzia.starwars.di.MyDispatchers
-import com.luzia.starwars.screens.planets.shared.domain.repository.PlanetRepository
+import com.luzia.architecture.Dispatcher
+import com.luzia.architecture.MyDispatchers
+import com.luzia.architecture.presentation.Result
+import com.luzia.architecture.presentation.ViewModel
+import com.luzia.domain.repository.PlanetRepository
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher

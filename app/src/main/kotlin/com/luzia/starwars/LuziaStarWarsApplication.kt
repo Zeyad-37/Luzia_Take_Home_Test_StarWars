@@ -7,19 +7,11 @@ import android.os.StrictMode.ThreadPolicy.Builder
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class LuziaStarWarsApplication : Application() { // , Configuration.Provider {
-//    @Inject
-//    lateinit var workerFactory: WorkerFactory
-//
-//    override val workManagerConfiguration: Configuration
-//        get() = Configuration.Builder()
-//            .setWorkerFactory(workerFactory)
-//            .build()
+class LuziaStarWarsApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
         setStrictModePolicy()
-//        Sync.initialize(this, workManagerConfiguration)
     }
 
     /**

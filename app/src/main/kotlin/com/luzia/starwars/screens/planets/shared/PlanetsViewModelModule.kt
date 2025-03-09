@@ -1,13 +1,12 @@
 package com.luzia.starwars.screens.planets.shared
 
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailState
-import com.luzia.starwars.screens.planets.list.domain.usecase.GetPlanetsUseCase
+import com.luzia.domain.usecase.GetPlanetsUseCase
 import com.luzia.starwars.screens.planets.list.presentation.viewmodel.InitialListState
 import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetsReducer
 import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetsState
-import com.luzia.starwars.screens.planets.shared.data.PlanetDataMapper
-import com.luzia.starwars.screens.planets.shared.data.PlanetRepositoryImpl
-import com.luzia.starwars.screens.planets.shared.domain.repository.PlanetRepository
+import com.luzia.data.PlanetRepositoryImpl
+import com.luzia.domain.repository.PlanetRepository
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
 import dagger.Binds
 import dagger.Module

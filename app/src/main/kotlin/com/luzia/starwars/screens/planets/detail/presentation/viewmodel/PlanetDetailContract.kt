@@ -1,8 +1,8 @@
 package com.luzia.starwars.screens.planets.detail.presentation.viewmodel
 
-import com.luzia.starwars.architecture.presentation.Effect
-import com.luzia.starwars.architecture.presentation.Input
-import com.luzia.starwars.architecture.presentation.State
+import com.luzia.architecture.presentation.Effect
+import com.luzia.architecture.presentation.Input
+import com.luzia.architecture.presentation.State
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
 
 sealed class PlanetDetailInput : Input

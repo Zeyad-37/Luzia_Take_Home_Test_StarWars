@@ -10,10 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.luzia.sharedui.theme.LuziaStarWarsTheme
 import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetClickedInput
 import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetListInput
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
-import com.luzia.starwars.ui.theme.LuziaStarWarsTheme
 
 @Composable
 fun PlanetList(

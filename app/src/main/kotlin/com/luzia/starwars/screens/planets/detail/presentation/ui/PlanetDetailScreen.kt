@@ -35,7 +35,7 @@ import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.SuccessS
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailInput
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailState
 import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailViewModel
-import com.luzia.starwars.screens.planets.shared.presentation.ui.ErrorScreen
+import com.luzia.sharedui.composables.ErrorScreen
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable

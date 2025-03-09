@@ -10,9 +10,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.luzia.sharedui.theme.LuziaStarWarsTheme
 import com.luzia.starwars.screens.planets.detail.presentation.ui.PlanetDetailScreenStateHolder
 import com.luzia.starwars.screens.planets.list.presentation.ui.PlanetsScreenStateHolder
-import com.luzia.starwars.ui.theme.LuziaStarWarsTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

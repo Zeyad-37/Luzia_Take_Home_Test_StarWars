@@ -1,8 +1,8 @@
 package com.luzia.starwars.screens.planets.detail.presentation.viewmodel
 
 import app.cash.turbine.test
+import com.luzia.domain.repository.PlanetRepository
 import com.luzia.starwars.TestingData
-import com.luzia.starwars.screens.planets.shared.domain.repository.PlanetRepository
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions.assertEquals

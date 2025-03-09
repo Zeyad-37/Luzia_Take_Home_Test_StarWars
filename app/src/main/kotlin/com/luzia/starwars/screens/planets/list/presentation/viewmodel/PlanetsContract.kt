@@ -1,9 +1,9 @@
 package com.luzia.starwars.screens.planets.list.presentation.viewmodel
 
-import com.luzia.starwars.architecture.presentation.Effect
-import com.luzia.starwars.architecture.presentation.Input
-import com.luzia.starwars.architecture.presentation.Result
-import com.luzia.starwars.architecture.presentation.State
+import com.luzia.architecture.presentation.Effect
+import com.luzia.architecture.presentation.Input
+import com.luzia.architecture.presentation.Result
+import com.luzia.architecture.presentation.State
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
 
 sealed class PlanetListInput : Input
@@ -18,7 +18,8 @@ data class LoadingResult(val isLoading: Boolean) : PlanetListResult()
 sealed class PlanetListEffect : Effect
 data class GoToPlanetDetailsEffect(val planetId: String) : PlanetListEffect()
 
-sealed class PlanetsState(open val isLoading: Boolean, open val planets: List<PlanetPM>) : State
+sealed class PlanetsState(open val isLoading: Boolean, open val planets: List<PlanetPM>) :
+    State
 
 data class InitialListState(override val isLoading: Boolean) : PlanetsState(isLoading, emptyList())
 

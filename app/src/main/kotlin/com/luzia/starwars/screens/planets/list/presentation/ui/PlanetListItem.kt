@@ -14,8 +14,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.luzia.sharedui.theme.LuziaStarWarsTheme
 import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
-import com.luzia.starwars.ui.theme.LuziaStarWarsTheme
 
 @Composable
 fun PlanetListItem(planet: PlanetPM, onItemClick: () -> Unit = {}) {
