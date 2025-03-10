@@ -1,21 +1,23 @@
-package com.luzia.starwars.screens.planets.shared.presentation.model
+package com.luzia.starwars.screens.planets.presentation.shared.mapper
 
 import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.text.intl.Locale
 import com.luzia.domain.model.PlanetDomain
+import com.luzia.starwars.screens.planets.presentation.shared.models.PlanetPM
 import java.text.NumberFormat
+import kotlin.text.iterator
 
 object PlanetPresentationMapper {
 
     fun mapDomainToPresentation(planetDomain: PlanetDomain): PlanetPM = with(planetDomain) {
         val numberFormater = NumberFormat.getInstance()
         PlanetPM(
-            climate.capitalize(Locale.current),
+            climate.capitalize(Locale.Companion.current),
             numberFormater.format(diameter.toLong()),
-            gravity.capitalize(Locale.current),
-            name.capitalize(Locale.current),
+            gravity.capitalize(Locale.Companion.current),
+            name.capitalize(Locale.Companion.current),
             if (population.isNumeric()) numberFormater.format(population.toLong()) else population,
-            terrain.capitalize(Locale.current)
+            terrain.capitalize(Locale.Companion.current)
         )
     }
 

@@ -1,9 +1,9 @@
-package com.luzia.starwars.screens.planets.detail.presentation.viewmodel
+package com.luzia.starwars.screens.planets.presentation.detail.viewmodel
 
 import com.luzia.architecture.presentation.Effect
 import com.luzia.architecture.presentation.Input
 import com.luzia.architecture.presentation.State
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
+import com.luzia.starwars.screens.planets.presentation.shared.models.PlanetPM
 
 sealed class PlanetDetailInput : Input
 data class LoadPlanetInput(val planetId: String) : PlanetDetailInput()

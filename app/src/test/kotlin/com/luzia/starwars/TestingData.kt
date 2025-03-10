@@ -1,7 +1,7 @@
 package com.luzia.starwars
 
 import com.luzia.domain.model.PlanetDomain
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
+import com.luzia.starwars.screens.planets.presentation.shared.models.PlanetPM
 
 object TestingData {
     val planetDomain = PlanetDomain(

@@ -1,10 +1,10 @@
-package com.luzia.starwars.screens.planets.list.presentation.viewmodel
+package com.luzia.starwars.screens.planets.presentation.list.viewmodel
 
 import com.luzia.architecture.presentation.Effect
 import com.luzia.architecture.presentation.Input
 import com.luzia.architecture.presentation.Result
 import com.luzia.architecture.presentation.State
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
+import com.luzia.starwars.screens.planets.presentation.shared.models.PlanetPM
 
 sealed class PlanetListInput : Input
 data object LoadPlanetListInput : PlanetListInput()

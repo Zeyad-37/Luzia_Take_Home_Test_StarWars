@@ -1,11 +1,11 @@
-package com.luzia.starwars.screens.planets.list.presentation.viewmodel
+package com.luzia.starwars.screens.planets.presentation.list.viewmodel
 
 import com.luzia.architecture.Dispatcher
 import com.luzia.architecture.MyDispatchers
 import com.luzia.architecture.presentation.Result
 import com.luzia.architecture.presentation.ViewModel
 import com.luzia.domain.usecase.GetPlanetsUseCase
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
+import com.luzia.starwars.screens.planets.presentation.shared.mapper.PlanetPresentationMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi

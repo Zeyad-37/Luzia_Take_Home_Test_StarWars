@@ -1,4 +1,4 @@
-package com.luzia.starwars.screens.planets.detail.presentation.ui
+package com.luzia.starwars.screens.planets.presentation.detail.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,15 +26,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.BackButtonTappedInput
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.ErrorState
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.GoBackEffect
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.InitialState
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.LoadPlanetInput
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.SuccessState
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailInput
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailState
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailViewModel
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.BackButtonTappedInput
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.ErrorState
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.GoBackEffect
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.InitialState
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.LoadPlanetInput
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.SuccessState
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.PlanetDetailInput
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.PlanetDetailState
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.PlanetDetailViewModel
 import com.luzia.sharedui.composables.ErrorScreen
 import kotlinx.coroutines.flow.collectLatest
 

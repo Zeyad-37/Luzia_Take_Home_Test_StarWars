@@ -1,4 +1,4 @@
-package com.luzia.starwars.screens.planets.shared.presentation.model
+package com.luzia.starwars.screens.planets.presentation.shared.models
 
 data class PlanetPM(
     val climate: String,

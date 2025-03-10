@@ -1,4 +1,4 @@
-package com.luzia.starwars.screens.planets.list.presentation.ui
+package com.luzia.starwars.screens.planets.presentation.list.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,14 +24,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.luzia.starwars.R
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.ErrorListState
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.GoToPlanetDetailsEffect
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.InitialListState
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.LoadPlanetListInput
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetListInput
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetsState
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetsViewModel
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.SuccessListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.ErrorListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.GoToPlanetDetailsEffect
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.InitialListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.LoadPlanetListInput
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetListInput
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsViewModel
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.SuccessListState
 import com.luzia.sharedui.composables.ErrorScreen
 import kotlinx.coroutines.flow.collectLatest
 

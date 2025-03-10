@@ -1,6 +1,7 @@
 package com.luzia.starwars.screens.planets.shared.presentation.model
 
 import com.luzia.starwars.TestingData
+import com.luzia.starwars.screens.planets.presentation.shared.mapper.PlanetPresentationMapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

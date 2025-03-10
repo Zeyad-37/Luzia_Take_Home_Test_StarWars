@@ -1,7 +1,7 @@
-package com.luzia.starwars.screens.planets.list.presentation.viewmodel
+package com.luzia.starwars.screens.planets.presentation.list.viewmodel
 
 import com.luzia.architecture.presentation.Reducer
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
+import com.luzia.starwars.screens.planets.presentation.shared.models.PlanetPM
 
 class PlanetsReducer : Reducer<PlanetListResult, PlanetsState> {
 

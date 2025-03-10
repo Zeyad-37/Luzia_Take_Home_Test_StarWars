@@ -1,6 +1,13 @@
 package com.luzia.starwars.screens.planets.list.presentation.viewmodel
 
 import com.luzia.starwars.TestingData
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.ErrorListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.ErrorResult
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.InitialListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.LoadPlanetListResult
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.LoadingResult
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsReducer
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.SuccessListState
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

@@ -3,7 +3,13 @@ package com.luzia.starwars.screens.planets.detail.presentation.viewmodel
 import app.cash.turbine.test
 import com.luzia.domain.repository.PlanetRepository
 import com.luzia.starwars.TestingData
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.BackButtonTappedInput
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.GoBackEffect
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.InitialState
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.LoadPlanetInput
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.PlanetDetailViewModel
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.SuccessState
+import com.luzia.starwars.screens.planets.presentation.shared.mapper.PlanetPresentationMapper
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach

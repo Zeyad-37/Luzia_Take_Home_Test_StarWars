@@ -1,13 +1,14 @@
-package com.luzia.starwars.screens.planets.shared
+package com.luzia.starwars.screens.planets.presentation.shared
 
-import com.luzia.starwars.screens.planets.detail.presentation.viewmodel.PlanetDetailState
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.PlanetDetailState
 import com.luzia.domain.usecase.GetPlanetsUseCase
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.InitialListState
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetsReducer
-import com.luzia.starwars.screens.planets.list.presentation.viewmodel.PlanetsState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.InitialListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsReducer
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsState
 import com.luzia.data.PlanetRepositoryImpl
 import com.luzia.domain.repository.PlanetRepository
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
+import com.luzia.starwars.screens.planets.presentation.detail.viewmodel.InitialState
+import com.luzia.starwars.screens.planets.presentation.shared.mapper.PlanetPresentationMapper
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -40,7 +41,7 @@ object PlanetsViewModelModule {
     @Provides
     @ViewModelScoped
     fun providePlanetDetailInitialState(): PlanetDetailState =
-        com.luzia.starwars.screens.planets.detail.presentation.viewmodel.InitialState(false, "")
+        InitialState(false, "")
 }
 
 @Module

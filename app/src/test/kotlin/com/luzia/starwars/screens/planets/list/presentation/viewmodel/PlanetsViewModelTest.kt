@@ -3,7 +3,12 @@ package com.luzia.starwars.screens.planets.list.presentation.viewmodel
 import app.cash.turbine.test
 import com.luzia.domain.usecase.GetPlanetsUseCase
 import com.luzia.starwars.TestingData
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPresentationMapper
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.InitialListState
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.LoadPlanetListInput
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsReducer
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.PlanetsViewModel
+import com.luzia.starwars.screens.planets.presentation.list.viewmodel.SuccessListState
+import com.luzia.starwars.screens.planets.presentation.shared.mapper.PlanetPresentationMapper
 import com.luzia.testBase.CoroutineTestExtension
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flowOf

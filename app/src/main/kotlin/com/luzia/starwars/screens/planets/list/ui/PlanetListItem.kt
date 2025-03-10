@@ -1,4 +1,4 @@
-package com.luzia.starwars.screens.planets.list.presentation.ui
+package com.luzia.starwars.screens.planets.presentation.list.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.luzia.sharedui.theme.LuziaStarWarsTheme
-import com.luzia.starwars.screens.planets.shared.presentation.model.PlanetPM
+import com.luzia.starwars.screens.planets.presentation.shared.models.PlanetPM
 
 @Composable
 fun PlanetListItem(planet: PlanetPM, onItemClick: () -> Unit = {}) {
