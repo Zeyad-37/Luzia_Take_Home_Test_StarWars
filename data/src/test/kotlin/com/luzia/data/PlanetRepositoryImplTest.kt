@@ -1,18 +1,16 @@
 package com.luzia.data
 
 import com.luzia.data.api.StarWarsAPI
-import com.luzia.domain.model.PlanetDomain
 import com.luzia.data.db.PlanetsDAO
+import com.luzia.domain.model.PlanetDomain
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.mockito.Mockito.anyList
 import org.mockito.Mockito.doAnswer
 import org.mockito.Mockito.reset
 import org.mockito.Mockito.spy
 import org.mockito.kotlin.mock
-import org.mockito.kotlin.never
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
 import java.io.IOException
@@ -35,13 +33,12 @@ class PlanetRepositoryImplTest {
         val listDTOs = listOf(TestingData.planetDTO, TestingData.planetDTO2)
         val expected = listOf(TestingData.planetDomain, TestingData.planetDomain2)
         whenever(starWarsAPI.getPlanets()).thenReturn(TestingData.planetResponse)
-        whenever(planetsDAO.insertAllIgnore(mapper.mapDTOsToEntities(listDTOs))).thenReturn(Unit)
+        whenever(planetsDAO.insertAllReplace(mapper.mapDTOsToEntities(listDTOs))).thenReturn(Unit)
 
         assertEquals(expected, planetRepositoryImpl.getPlanets())
 
         verify(starWarsAPI).getPlanets()
-        verify(planetsDAO).insertAllIgnore(listOf(TestingData.planetEntity, TestingData.planetEntity2))
-        verify(planetsDAO, never()).insertAllReplace(anyList())
+        verify(planetsDAO).insertAllReplace(listOf(TestingData.planetEntity, TestingData.planetEntity2))
     }
 
     @Test
