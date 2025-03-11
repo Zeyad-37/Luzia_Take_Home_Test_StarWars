@@ -13,14 +13,7 @@ object PlanetDataMapper {
     fun mapEntityToDomain(planetEntity: PlanetEntity): PlanetDomain =
         with(planetEntity) { PlanetDomain(climate, diameter, gravity, name, population, terrain) }
 
-    fun mapEntitiesToDomains(planetEntity: List<PlanetEntity>): List<PlanetDomain> =
-        planetEntity.map { mapEntityToDomain(it) }
-
     fun mapDTOsToEntities(planetDTOs: List<PlanetDTO>): List<PlanetEntity> = planetDTOs.map {
         with(it) { PlanetEntity(climate, diameter, gravity, name, population, terrain) }
-    }
-
-    fun mapDomainToEntity(planet: PlanetDomain): PlanetEntity = with(planet) {
-        PlanetEntity(climate, diameter, gravity, name, population, terrain)
     }
 }

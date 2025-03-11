@@ -27,18 +27,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+    kotlinOptions.jvmTarget = "17"
 }
 
 dependencies {
     api(project(":architecture"))
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
-    implementation(libs.androidx.core.ktx)
-    testImplementation(project(":testBase"))
 
+    testImplementation(project(":testBase"))
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.turbine)
@@ -49,8 +46,4 @@ dependencies {
     testImplementation(libs.junit.jupiter.engine)
     testImplementation(libs.junit.jupiter.params)
     testImplementation(libs.junit.vintage.engine)
-    testImplementation(libs.androidx.room.testing)
-
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

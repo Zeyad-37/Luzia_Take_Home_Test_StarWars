@@ -22,9 +22,7 @@ class CoroutineTestExtension : BeforeAllCallback, BeforeEachCallback, Extension 
     }
 
     override fun beforeEach(context: ExtensionContext) =
-        Dispatchers.setMain(
-            getStore(context).get("testDispatcher", StandardTestDispatcher()::class.java)
-        )
+        Dispatchers.setMain(getStore(context).get("testDispatcher", StandardTestDispatcher()::class.java))
 
     private fun getStore(context: ExtensionContext): Store =
         context.getStore(Namespace.create(javaClass))

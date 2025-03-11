@@ -46,7 +46,6 @@ dependencies {
     implementation(libs.converter.kotlinx.serialization)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.androidx.core.ktx)
 
     testImplementation(project(":testBase"))
     testImplementation(libs.mockito.core)
@@ -60,6 +59,4 @@ dependencies {
     testImplementation(libs.junit.jupiter.params)
     testImplementation(libs.junit.vintage.engine)
     testImplementation(libs.androidx.room.testing)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

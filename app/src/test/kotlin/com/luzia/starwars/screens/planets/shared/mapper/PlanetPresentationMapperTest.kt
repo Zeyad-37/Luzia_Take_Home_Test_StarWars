@@ -1,4 +1,4 @@
-package com.luzia.starwars.screens.planets.shared.presentation.model
+package com.luzia.starwars.screens.planets.shared.presentation.mapper
 
 import com.luzia.starwars.TestingData
 import com.luzia.starwars.screens.planets.presentation.shared.mapper.PlanetPresentationMapper
