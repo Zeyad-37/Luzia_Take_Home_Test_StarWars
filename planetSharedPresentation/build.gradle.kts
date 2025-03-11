@@ -1,11 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.junit.jupiter)
 }
 
 android {
-    namespace = "com.luzia.sharedui"
+    namespace = "com.luzia.planetsharedpresentation"
     compileSdk = 35
 
     defaultConfig {
@@ -26,20 +26,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions.jvmTarget = "17"
-    buildFeatures.compose = true
     testOptions.unitTests.isReturnDefaultValues = true
-    testOptions.unitTests.isIncludeAndroidResources = true
 }
 
 dependencies {
-    val composeBom = platform(libs.androidx.compose.bom)
-    implementation(composeBom)
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
-    testImplementation(project(":testBase"))
+    implementation(project(":domain"))
+    implementation(project(":testBase"))
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.turbine)
+    testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter.api)
+    testImplementation(libs.junit.jupiter.engine)
+    testImplementation(libs.junit.jupiter.params)
+    testImplementation(libs.junit.vintage.engine)
 }

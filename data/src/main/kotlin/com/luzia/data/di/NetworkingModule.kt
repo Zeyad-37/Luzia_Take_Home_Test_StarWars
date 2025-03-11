@@ -1,6 +1,7 @@
 package com.luzia.data.di
 
 import android.util.Log
+import com.luzia.data.PlanetDataMapper
 import com.luzia.data.api.StarWarsAPI
 import dagger.Module
 import dagger.Provides
@@ -66,4 +67,8 @@ object NetworkingModule {
     @Provides
     @Singleton
     fun provideTransactionsAPI(retrofit: Retrofit): StarWarsAPI = retrofit.create(StarWarsAPI::class.java)
+
+    @Provides
+    @Singleton
+    fun providePlanetDataMapper(): PlanetDataMapper = PlanetDataMapper
 }
