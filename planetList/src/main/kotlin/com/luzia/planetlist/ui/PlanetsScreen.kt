@@ -18,6 +18,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
@@ -39,10 +40,11 @@ import kotlinx.coroutines.flow.collectLatest
 fun PlanetsScreenStateHolder(viewModel: PlanetsViewModel = hiltViewModel(), onPlanetClick: (String) -> Unit) {
     val snackBarHostState: SnackbarHostState = remember { SnackbarHostState() }
     val planetsState by viewModel.state.collectAsState()
-    LaunchedEffect(Unit) {
+    val currentOnPlanetClick by rememberUpdatedState(onPlanetClick)
+    LaunchedEffect(currentOnPlanetClick) {
         viewModel.effect.collectLatest {
             when (it) {
-                is GoToPlanetDetailsEffect -> onPlanetClick(it.planetId)
+                is GoToPlanetDetailsEffect -> currentOnPlanetClick(it.planetId)
             }
         }
     }
